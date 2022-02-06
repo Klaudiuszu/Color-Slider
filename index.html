@@ -22,7 +22,13 @@
     <div class="wrapper">
       B<input type="range" min="0" max="255" value="0" id="blue" oninput="colors()">
     </div>
-    <span id="output">RGB(0,0,0)</span>
+    <span id="output">rgb(0,0,0)</span>
+    <form class="check-rgb-colors">
+      <input id="red" placeholder="input R color" />
+      <input id="green" placeholder="input G color" />
+      <input id="blue" placeholder="input B color" />
+      <button id="add-button">ADD COLOR</button>
+    </form>
   </div>
 
   <script src="/localStorage.js"></script>

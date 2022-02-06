@@ -33,13 +33,15 @@ input[type="range"]{
   width: 80%;
   margin-left: 10px;
   margin-top: 25px;
+  background: transparent;
 }
+
 
 span{
   display: inline-block;
   text-align: center;
   margin: 20px 0;
-  background-color: #A07855FF;
+  background-color: #5B84B1FF;
   color: #D4B996FF;
   padding: 10px 30px;
   font-size: 18px;
