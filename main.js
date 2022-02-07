@@ -1,4 +1,4 @@
-const colorInput = document.querySelector(".input-class");
+const colorInput = document.querySelectorAll("#input-class");
 
 function colors(){
   let color = "";
@@ -24,24 +24,19 @@ function colors(){
     newSpan.style.backgroundColor =  record;
       })}
 
-      colorInput.addEventListener("submit", (event) => {
-        let record = event.target.value;
-        if(record <= 0 && record >= 255){
-          alert("only record from 0 to 255")
-          console.log(record)
-  };
-
-})
-
-
-// const addNew = document.querySelector("#add-button")
-// addNew.addEventListener("click", addColor);
-
-// function addColor(event){
-// event.preventDefault();
-// const newSpan = document.createElement("span");
-// newSpan.classList.add("add-color")
-// document.body.appendChild(newSpan);
-// }
+    function inputColor(){
+      document.querySelectorAll("#input-class").forEach(colorInput =>{ // pętla do obsługi selectorALL
+        colorInput.addEventListener("input",(event) =>{
+          event.preventDefault();
+          const value = event.target.value;
+          if(value<=0 || value>=255 || value.match(/^[0-9]+$/) == null ){
+            colorInput.value = "";
+            alert("Wpisz liczby z zakresu od 0 do 255!");
+          }
+              
+      })
+      })
+    }
 
 colors();
+inputColor();
